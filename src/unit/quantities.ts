@@ -10,6 +10,14 @@ export const Dimensionless: GenericMeasure<number, {}> = Measure.dimensionless(1
 
 // Base units
 
+/** point */
+export type Paper<N = number> = LiftMeasure<typeof Base.point, N>;
+export const Paper: Paper = Base.point;
+
+/** pixel */
+export type Screen<N = number> = LiftMeasure<typeof Base.pixel, N>;
+export const Screen: Screen = Base.pixel;
+
 /** meters */
 export type Length<N = number> = LiftMeasure<typeof Base.meters, N>;
 export const Length: Length = Base.meters;
